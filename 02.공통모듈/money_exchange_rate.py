@@ -1,3 +1,12 @@
+# TODO : Git SourceTree로 Git Push 진행시 아래와 같은 오류 메시지 출력되면
+#        아래와 같은 방법으로 해결 해야함 (2025.02.18 minjae)
+# 참고 URL - https://velog.io/@nies/git%EC%97%90-push%ED%95%98%EB%A0%A4%EB%8A%94%EB%8D%B0-remote-Permission-to-git%EC%A3%BC%EC%86%8C-denied-to-user%EC%9D%B4%EB%A6%84-403-error-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95-AI-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EB%8B%A4%EC%84%AF%EC%A7%B8-%EC%A3%BC2%EC%9D%BC%EC%B0%A8
+# 오류 메시지 - git -c diff.mnemonicprefix=false -c core.quotepath=false --no-optional-locks push -v origin main:main
+# remote: Permission to minjaejeon0827/BotProject.git denied to bonghakjeon.
+# fatal: unable to access 'https://github.com/minjaejeon0827/BotProject.git/': The requested URL returned error: 403
+# Pushing to https://github.com/minjaejeon0827/BotProject.git
+# 오류가 나면서 완료됨. 
+
 import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
