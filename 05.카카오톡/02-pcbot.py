@@ -1,3 +1,7 @@
+# 비쥬얼스튜디오코드(VSCode) cmd 터미널창에 
+# 아래처럼 윈도우 프로그래밍 win32 라이브러리 "pywin32" 설치
+# pip install pywin32
+
 import win32con, win32api, win32gui, ctypes, win32clipboard
 import time
 import re
