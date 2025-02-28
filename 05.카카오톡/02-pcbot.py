@@ -104,11 +104,13 @@ def main(chatname):
                 msg = message.get("msg")
                 if last_message == "":
                     last_message = msg
+                # 공통 모듈(환율) 사용해야 하는 경우 
                 if msg != last_message and msg != my_message:
                     match_money = re.search(f"^([0-9]+\s?)({"|".join(CURRENCY_LIST)})+$", msg)
                     match_weather = re.search("^([가-힣]{2})\s?날씨$", msg)
                     if match_money:
                         src = match_money.group()
+                        # 공통 모듈(환율) 함수 money_exchange_rate.google_money_exchange_rate 호출하여 환율 계산 처리
                         result = money_exchange_rate.google_money_exchange_rate(src)
                         output = f"{result[1]} {result[0]} 원"
                     else:
